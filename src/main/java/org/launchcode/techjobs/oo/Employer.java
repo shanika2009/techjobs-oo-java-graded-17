@@ -51,5 +51,4 @@ public class Employer {
     public void setValue(String value) {
         this.value = value;
     }
-
 }

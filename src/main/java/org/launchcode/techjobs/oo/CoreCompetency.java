@@ -53,4 +53,7 @@ public class CoreCompetency {
     public int getId() {
         return id;
     }
+
+//    public boolean isEmpty() {
+//    }
 }

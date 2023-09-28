@@ -31,7 +31,25 @@ public class Job {
         this.coreCompetency = coreCompetency;
 
     }
-
+//public String Jobs(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency){
+//    StringBuilder result = new StringBuilder();
+//        if(name != null && !name.isEmpty()) {
+//        result.append("Name: ").append(name);
+//    } else {
+//        result.append("Name: Data not available");
+//    }if(employer != null && !employer.isEmpty()) {
+//        result.append("Employer: ").append(employer);
+//    } else {
+//        result.append("Employer: Data not available");
+//    }if(positionType != null && !positionType.isEmpty()) {
+//        result.append("Position Type: ").append(positionType);
+//    } else {
+//        result.append("Position Type: Data not available");
+//    }if(coreCompetency != null && !coreCompetency.isEmpty()) {
+//        result.append("Core Competency: ").append(coreCompetency);
+//    } else {
+//        result.append("Core Competency: Data not available");
+//    }
 
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields

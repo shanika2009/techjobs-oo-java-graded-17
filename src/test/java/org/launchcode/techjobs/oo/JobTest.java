@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -22,6 +23,23 @@ public class JobTest extends AbstractTest {
 assertNotEquals(testJob, testJob2);
     }
 
+    @Test
+    public void testJobConstructorSetsAllFields() {
+        Job allFieldsTest = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertTrue(true);
+        assertEquals("Product tester", allFieldsTest.getName());
+        assertEquals("ACME", allFieldsTest.getEmployer().getValue());
+        assertEquals("Desert", allFieldsTest.getLocation().getValue());
+        assertEquals("Quality control", allFieldsTest.getPositionType().getValue());
+        assertEquals("Persistence", allFieldsTest.getCoreCompetency().getValue());
+    }
+
+//    @Test
+//    public void testJobsForEquality() {
+//        Job equalityTest1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//        Job equalityTest2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//
+//    }
 
     @Test
     public void emptyLine (){
@@ -49,10 +67,11 @@ assertNotEquals(testJob, testJob2);
     }
 
 //    @Test
-//    public void testJobsForEquality() {
-//        Job job1 = new Job("Tech", "UBC", "STL", "full-time");
-//        Job job2 = new Job("Tech", "ESI", "Atlanta", "part-time");
-//assertEquals(job1, job2);
+//    public void testToStringHandlesEmptyField() {
+//    Job emptyField = new Job();
+//    String result = emptyField.toString();
+//
+//    Assert.assertEquals(result.contains(""));
 //
 //
 //    }
