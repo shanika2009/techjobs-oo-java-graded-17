@@ -66,13 +66,13 @@ assertNotEquals(testJob, testJob2);
 
     }
 
-//    @Test
-//    public void testToStringHandlesEmptyField() {
-//    Job emptyField = new Job();
-//    String result = emptyField.toString();
-//
-//    Assert.assertEquals(result.contains(""));
-//
-//
-//    }
+    @Test
+    public void testToStringHandlesEmptyField() {
+    Job emptyField = new Job();
+    String result = emptyField.toString();
+
+
+
+
+    }
 }
