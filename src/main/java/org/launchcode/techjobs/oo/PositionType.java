@@ -56,4 +56,6 @@ public class PositionType {
         this.value = value;
     }
 
+//    public boolean isEmpty() {
+//    }
 }

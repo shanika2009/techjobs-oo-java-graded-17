@@ -54,6 +54,10 @@ public class CoreCompetency {
         return id;
     }
 
+    public boolean isEmpty() {
+        return false;
+    }
+
 //    public boolean isEmpty() {
 //    }
 }

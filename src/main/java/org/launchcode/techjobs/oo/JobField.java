@@ -35,4 +35,8 @@ public abstract class JobField {
     public void setValue(String value) {
         this.value = value;
     }
+
+    public boolean isEmpty() {
+        return false;
+    }
 }

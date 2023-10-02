@@ -42,7 +42,7 @@ assertNotEquals(testJob, testJob2);
 //    }
 
     @Test
-    public void emptyLine (){
+    public void testToStringStartsAndEndsWithNewLine (){
 
         Job emptyJob = new Job();
         String result = emptyJob.toString();
@@ -71,7 +71,12 @@ assertNotEquals(testJob, testJob2);
     Job emptyField = new Job();
     String result = emptyField.toString();
 
-
+        Job emptyFields = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        assertEquals("Data not available", emptyFields.getName());
+        assertEquals("Data not available", emptyFields.getEmployer().getValue());
+        assertEquals("Data not available", emptyFields.getLocation().getValue());
+        assertEquals("Data not available", emptyFields.getPositionType().getValue());
+        assertEquals("Data not available", emptyFields.getCoreCompetency().getValue());
 
 
     }
