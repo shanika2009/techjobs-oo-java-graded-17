@@ -24,9 +24,9 @@ assertNotEquals(testJob, testJob2);
     }
 
     @Test
-    public void testJobConstructorSetsAllFields() {
+        public void testJobConstructorSetsAllFields() {
         Job allFieldsTest = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertTrue(true);
+       Assert.assertTrue(true);
         assertEquals("Product tester", allFieldsTest.getName());
         assertEquals("ACME", allFieldsTest.getEmployer().getValue());
         assertEquals("Desert", allFieldsTest.getLocation().getValue());
@@ -72,6 +72,7 @@ assertNotEquals(testJob, testJob2);
     String result = emptyField.toString();
 
         Job emptyFields = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        assertTrue(false);
         assertEquals("Data not available", emptyFields.getName());
         assertEquals("Data not available", emptyFields.getEmployer().getValue());
         assertEquals("Data not available", emptyFields.getLocation().getValue());

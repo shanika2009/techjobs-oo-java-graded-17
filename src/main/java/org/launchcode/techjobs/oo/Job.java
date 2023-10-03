@@ -103,52 +103,68 @@ public class Job {
     @Override
     public String toString() {
         String newLine = System.lineSeparator();
-        return newLine +
-                " ID: " + id + newLine +
-                " Name: " + name + newLine +
-                " Employer: " + employer + newLine +
-                " Location: " + location + newLine +
-                " Position Type: " + positionType + newLine +
-                " Core Competency: " + coreCompetency + newLine;
-//    StringBuilder result = new StringBuilder();
-//        if(name != null && !name.isEmpty()) {
-//        result.append("Name: ").append(name);
-//    } else {
-//        result.append("Name: Data not available");
-//    }if(employer != null && !employer.isEmpty()) {
-//        result.append("Employer: ").append(employer);
-//    } else {
-//        result.append("Employer: Data not available");
-//    }if(positionType != null && !positionType.isEmpty()) {
-//        result.append("Position Type: ").append(positionType);
-//    } else {
-//        result.append("Position Type: Data not available");
-//    }if(coreCompetency != null && !coreCompetency.isEmpty()) {
-//        result.append("Core Competency: ").append(coreCompetency);
-//    } else {
-//        result.append("Core Competency: Data not available");
-//    }
+        String result = "";
+        if(id != 0){
+            result += newLine + "ID: " + id + newLine;
+        }else {
+            result += "ID: Data not Available" + newLine;
+        }
+        if (name != null && !name.isEmpty()) {
+            result += "Name: " + name + newLine;
+        } else {
+            result += "Name: Data not available" + newLine;
+        }
+        if (employer.getValue() != null && !employer.getValue().isEmpty()) {
+            result += " Employer: " + employer + newLine;
+        } else {
+            result += "Employer: Data not available" + newLine;
+        }
+        if (location.getValue() != null && !location.getValue().isEmpty()) {
+            result += "Location: " + location + newLine;
+        } else {
+            result += "Location: Data not available" + newLine;
+        }
+        if (positionType.getValue() != null && !positionType.getValue().isEmpty()) {
+            result += " Position Type: " + positionType + newLine;
+        } else {
+            result += "Position Type: Data not available" + newLine;
+        }
+
+        if (coreCompetency.getValue() != null || !coreCompetency.getValue().isEmpty()) {
+            result += "Core Competency: " + coreCompetency + newLine;
+        } else {
+            result += "Core Competency: Data not available" + newLine;
+        }
+
+//        return newLine +
+//                " ID: " + id + newLine +
+//                " Name: " + name + newLine +
+//                " Employer: " + employer + newLine +
+//                " Location: " + location + newLine +
+//                " Position Type: " + positionType + newLine +
+//                " Core Competency: " + coreCompetency + newLine;
+//        if (employer.getValue() == null || employer.getValue().isEmpty()) {
+//            employer.setValue("Data Not Available");
 //        }
-//    }
+//        if (location.getValue() == null || location.getValue().isEmpty()) {
+//            location.setValue("Data Not Available");
+//        }
+//        if (positionType.getValue() == null || positionType.getValue().isEmpty()) {
+//            positionType.setValue("Data Not Available");
+//        }
+//        if (coreCompetency.getValue() == null || coreCompetency.getValue().isEmpty()) {
+//            coreCompetency.setValue("Data Not Available");
+//        }
 
 
-//    StringBuilder result = new StringBuilder();
-//        if(name != null && !name.isEmpty()) {
-//        result.append("Name: ").append(name);
-//    } else {
-//        result.append("Name: Data not available");
-//    }if(employer != null && !employer.isEmpty()) {
-//        result.append("Employer: ").append(employer);
-//    } else {
-//        result.append("Employer: Data not available");
-//    }if(positionType != null && !positionType.isEmpty()) {
-//        result.append("Position Type: ").append(positionType);
-//    } else {
-//        result.append("Position Type: Data not available");
-//    }if(coreCompetency != null && !coreCompetency.isEmpty()) {
-//        result.append("Core Competency: ").append(coreCompetency);
-//    } else {
-//        result.append("Core Competency: Data not available");
-//    }
+//        return  newLine +
+//                " ID: " + id + newLine +
+//                " Name: " + name + newLine +
+//                " Employer: " + employer + newLine +
+//                " Location: " + location + newLine +
+//                " Position Type: " + positionType + newLine +
+//                " Core Competency: " + coreCompetency + newLine;
+        return newLine;
     }
+
 }
