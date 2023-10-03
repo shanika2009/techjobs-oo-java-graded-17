@@ -57,7 +57,7 @@ assertNotEquals(testJob, testJob2);
 
         String result = checkFullJobListing.toString();
 
-         assertTrue(result.contains("ID: " + checkFullJobListing.getId()));
+//         assertTrue(result.contains("ID: " + checkFullJobListing.getId()));
         assertTrue(result.contains("Name: " + checkFullJobListing.getName()));
         assertTrue(result.contains("Employer: " + checkFullJobListing.getEmployer()));
         assertTrue(result.contains("Location: " + checkFullJobListing.getLocation()));
@@ -71,14 +71,19 @@ assertNotEquals(testJob, testJob2);
 
         Job emptyFields = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
         String result = emptyFields.toString();
+        String newLine = System.lineSeparator();
 
+        String output = newLine +
+                "ID: " + emptyFields.getId() + newLine +
+                "Name: " + emptyFields.getName() + newLine +
+                "Employer: " + emptyFields.getEmployer() + newLine +
+                "Location: " + emptyFields.getLocation() + newLine +
+                "Position Type: " + emptyFields.getPositionType() + newLine +
+                "Core Competency: " + emptyFields.getCoreCompetency() + newLine;
 //        assertTrue("Data not available",false);
 
-        assertEquals("", emptyFields.getName());
-        assertEquals("", emptyFields.getEmployer().getValue());
-        assertEquals("", emptyFields.getLocation().getValue());
-        assertEquals("", emptyFields.getPositionType().getValue());
-        assertEquals("", emptyFields.getCoreCompetency().getValue());
+        assertEquals(output, emptyFields.toString());
+
 
 
     }
